@@ -6,6 +6,7 @@ This repository hosts the web project **Guaxinim - Auto Parts**, developed as a 
 
 ---
 <img width="1000" height="700" alt="image" src="https://github.com/user-attachments/assets/97cea984-3b3a-481f-b32f-81e45fec9eb8" />
+
 ### Project Overview
 
 The main objective of this project was to apply the knowledge and steps involved in **system analysis, design, and prototyping** learned in class. The website simulates the online presence of an auto parts store, "Guaxinim - Auto Parts," aiming to demonstrate information organization and the structure of a system for retail automotive products.
