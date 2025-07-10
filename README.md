@@ -1,6 +1,6 @@
 
 
-## Guaxinim - Auto Parts: Academic Project for Systems Analysis and Design
+## Guaxinim - Auto Peças: Academic Project for Systems Analysis and Design
 
 This repository hosts the web project **Guaxinim - Auto Parts**, developed as a practical assignment for the **Systems Analysis and Design** course.
 
