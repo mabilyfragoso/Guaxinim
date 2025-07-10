@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guaxinim - Auto Peças</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/responsividade.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="cabecalho">
+                <div class="container">
+                    <div class="logo">
+                        <img src="/assets/imagens/logotransparente.png" alt="Guaxinim Auto Peças">
+                    </div>
+
+                    <div class="center-controls">
+                        <div class="cep-input">
+                            <input class="cep-label" type="text" id="cep" name="cep" maxlength="9"
+                                placeholder="CEP: 00000-000">
+                        </div>
+
+                        <div class="selecionarloja">
+                            <label for="seletorloja">Selecionar Loja:</label>
+                            <select id="seletorloja">
+                                <option value="" selected disabled>escolha uma filial</option>
+                                <option value="Mombaça - Matriz">Mombaça - Matriz</option>
+                                <option value="Tauá">Tauá</option>
+                                <option value="Iguatu">Iguatu</option>
+                                <option value="Acopiara">Acopiara</option>
+                                <option value="Crateús">Crateús</option>
+                                <option value="Senador Pompeu">Senador Pompeu</option>
+                                <option value="Mombaça Tintas">Mombaça Tintas</option>
+                                <option value="Parambu">Parambu</option>
+                                <option value="quixadá">quixadá</option>
+                                <option value="Quixeramobim">Quixeramobim</option>
+                                <option value="Pedra branca">Pedra branca</option>
+                                <option value="Guaraciaba do norte">Guaraciaba do norte</option>
+                                <option value="Icó">Icó</option>
+                                <option value="Nova Russas">Nova Russas</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Ícones à direita: User + Sacola -->
+                    <div class="menu-icon">
+                        <a href="/pages/user.html">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="loja-selecionada" style="margin: 10px; font-weight: bold;"></div>
+        </header>
+        <main>
+            <nav class="menu-categorias">
+
+                <form class="form-pesquisa" action="#" method="GET">
+                    <input type="search" id="campodebusca" placeholder="O que você procura?"
+                        aria-label="Pesquisar produtos" />
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Baterias</a></li>
+                    <li><a href="#">Óleo de motor</a></li>
+                    <li><a href="#">Palheta</a></li>
+                    <li><a href="#">Amortecedores</a></li>
+                    <li><a href="#">Radiadores</a></li>
+                </ul>
+            </nav>
+
+            <div id="loja-selecionada" style="margin: 10px; font-weight: bold;"></div>
+
+            <div class="carrossel">
+                <div class="slides">
+                    <div class="textos textos1">
+                        <h2>Óleo de Motor 5W40 4T Motul 300V Road Racing</h2>
+                        <p>Marca: Motul Modelo: 5w40</p>
+                        <br>
+                        <a href="#" class="botao-banner">Pegar Oferta</a>
+                    </div>
+                    <div class="textos textos2">
+                        <h2>Par de Puxador de Maçaneta Rhino Can-Am Maverick X3</h2>
+                        <p>Marca: Rhino Modelo: Can-Am X3</p>
+                        <br>
+                        <a href="#" class="botao-banner">Pegar Oferta</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produtos-container">
+                <div class="produtocard" data-nome="Amortecedores" data-marca="S10 BLAZER">
+                    <span class="oferta-tag">Oferta do Dia</span>
+                    <img src="/assets/imagens/amortecedor.webp" alt="">
+                    <h4>KIT AMORTECEDORES</h4>
+                    <p class="marca">S10 e BLAZER a partir 1995</p>
+                    <p class="preco">
+                        <span class="precoantigo">R$250,00</span>
+                        <span class="precoatual">R$140,00</span>
+                    </p>
+                    <a href="#" class="botaoproduto btnAbrirOferta">Ver Oferta</a>
+                </div>
+
+                <div class="produtocard" data-nome="bicicleta" data-marca="Eqmax">
+                    <span class="oferta-tag">Oferta do Dia</span>
+                    <img src="/assets/imagens/suportebicicleta.jpg" alt="">
+                    <h3>Suporte para bicicleta </h3>
+                    <p class="marca">Eqmax - Velox Aço Carbono</p>
+                    <p class="preco">
+                        <span class="precoantigo">R$370,00</span>
+                        <span class="precoatual">R$314,00</span>
+                    </p>
+                    <a href="#" class="botaoproduto">Ver Oferta</a>
+                </div>
+
+                <div class="produtocard" data-nome="calha" data-marca="TG Poli">
+                    <span class="oferta-tag">Oferta do Dia</span>
+                    <img src="/assets/imagens/chuva.jpg" alt="">
+                    <h3>Calha de chuva</h3>
+                    <p class="marca">TG Poli</p>
+                    <p class="preco">
+                        <span class="precoantigo">R$130,00</span>
+                        <span class="precoatual">R$100,00</span>
+                    </p>
+                    <a href="#" class="botaoproduto">Ver Oferta</a>
+                </div>
+
+                <div class="produtocard" data-nome="radio" data-marca="Roadstar">
+                    <span class="oferta-tag">Oferta do Dia</span>
+                    <img src="/assets/imagens/radio.jpg" alt="">
+                    <h3>Auto rádio MP3 player </h3>
+                    <p class="marca">Roadstar</p>
+                    <p class="preco">
+                        <span class="precoantigo">R$100,00</span>
+                        <span class="precoatual">R$70,00</span>
+                    </p>
+                    <a href="#" class="botaoproduto">Ver Oferta</a>
+                </div>
+            </div>
+
+            <div class="banner3">
+                <center>
+                    <img src="/assets/imagens/banner3.png" width="1050px">
+                </center>
+            </div>
+
+
+            <div class="produtos-container">
+                <div class="produtocard" data-nome="alarme" data-marca="Positron">
+                    <span class="oferta-tag">Oferta do Dia</span>
+                    <img src="/assets/imagens/alarme.jpg" alt="">
+                    <h3>Alarme para automóveis</h3>
+                    <p class="marca">Positron </p>
+                    <p class="preco">
+                        <span class="precoantigo">R$250,00</span>
+                        <span class="precoatual">R$199,99</span>
+                    </p>
+                    <a href="#" class="botaoproduto">Ver Oferta</a>
+                </div>
+
+                <div class="produtocard" data-nome="pneu" data-marca="Roadking">
+                    <span class="oferta-tag">Oferta do Dia</span>
+                    <img src="/assets/imagens/pneu.webp" alt="">
+                    <h3>Pneu Aro 14 </h3>
+                    <p class="marca"> Roadking 175/70R14 C 95/93T Radial 109</p>
+                    <p class="preco">
+                        <span class="precoantigo">R$280,00</span>
+                        <span class="precoatual">R$150,00</span>
+                    </p>
+                    <a href="#" class="botaoproduto">Ver Oferta</a>
+                </div>
+
+                <div class="produtocard" data-nome="filtro" data-marca="Wega">
+                    <span class="oferta-tag">Oferta do Dia</span>
+                    <img src="/assets/imagens/filtro.jpg" alt="">
+                    <h3>Filtro de ar do motor</h3>
+                    <p class="marca">Wega Motors </p>
+                    <p class="preco">
+                        <span class="precoantigo">R$89,00</span>
+                        <span class="precoatual">R$30,00</span>
+                    </p>
+                    <a href="#" class="botaoproduto">Ver Oferta</a>
+                </div>
+
+                <div class="produtocard" data-nome="farol" data-marca="Arteb">
+                    <span class="oferta-tag">Oferta do Dia</span>
+                    <img src="/assets/imagens/farol.jpg" alt="">
+                    <h3>Farol principal </h3>
+                    <p class="marca">Arteb</p>
+                    <p class="preco">
+                        <span class="precoantigo">R$485,00</span>
+                        <span class="precoatual">R$237,00</span>
+                    </p>
+                    <a href="#" class="botaoproduto">Ver Oferta</a>
+                </div>
+            </div>
+
+
+            <section class="noticias">
+                <div class="containernoticias">
+                    <h2>Receba nossas ofertas!</h2>
+                    <p>cadastre-se para receber novidades e promoções no seu e-mail.</p>
+                    <form action="#" method="post" class="noticiasforms">
+                        <input type="text" name="nome" placeholder="Seu nome:" required>
+                        <input type="email" name="email" placeholder="Seu e-mail:" required>
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <div class="containerfooter">
+                <div class="info">
+                    <h3>Horário de funcionamento:</h3>
+                    <br>
+                    <p>Segunda-feira - Sexta-feira: 07:00am – 17:30pm</p>
+                    <br>
+                    <p>Sábado: 07:00am – 13:00pm</p>
+                </div>
+
+                <div class="info">
+                    <h3>Nossas Franquias:</h3>
+                    <br>
+                    <a href="https://api.whatsapp.com/send/?phone=5588999885444">
+                        <p>Mombaça - Matriz</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588999780081&text&type=phone_number&app_absent=0">
+                        <p>Mombaça - Tintas</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588981444867&text&type=phone_number&app_absent=0">
+                        <p>Acopiara</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588997784595">
+                        <p>Tauá</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588981809281">
+                        <p>Parambu</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588999493441">
+                        <p>Iguatu</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588999990687">
+                        <p>quixadá</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588999780098">
+                        <p>Quixeramobim</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588999510721&text&type=phone_number&app_absent=0">
+                        <p>Crateús</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588997136226&text&type=phone_number&app_absent=0">
+                        <p>Pedra Branca</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588981657465&text&type=phone_number&app_absent=0">
+                        <p>Senador Pompeu</p>
+                    </a>
+                    <a
+                        href="https://api.whatsapp.com/send/?phone=%2B5588981705857&text=Ol%C3%A1%21&type=phone_number&app_absent=0">
+                        <p>Guaraciaba do Norte</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5588988501414&text&type=phone_number&app_absent=0">
+                        <p>Icó</p>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=558888352787&text&type=phone_number&app_absent=0">
+                        <p>Nova russas</p>
+                    </a>
+                </div>
+
+                <div class="info">
+                    <h3>Meu espaço:</h3>
+                    <br>
+                    <p><a href="/pages/user.html">Editar cadastro</a></p><br>
+                    <p><a href="#" id="abrirModalRastreio">Rastreio rápido</a></p>
+                </div>
+
+                <div class="info">
+                    <h3>Quem somos:</h3>
+                    <br>
+                    <p>Somos a maior rede de autopeças do interior do Ceará, há </p>
+                    <p>28 anos cuidando do seu veículo com peças de qualidade, preço </p>
+                    <p>justo e muito respeito aos nossos clientes.</p><br>
+                    <a href="https://youtu.be/NYbzVU0zXsc?list=TLGGRh8HglP0FiYwNjA3MjAyNQ"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <br><br>
+                    <h3>Nos Acompanhe</h3>
+                    <a href="https://www.instagram.com/guaxinimautopecas/"><i class="fa-brands fa-instagram"></i></a>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+
+                <div class="info">
+                    <h3>Área do administrador</h3>
+                    <a href="admin.html">Admin</a>
+
+                </div>
+
+
+            </div>
+            <center>
+                <h6>&copy Guaxinim Auto Peças - Todos os direitos reservados </h6>
+            </center>
+        </footer>
+
+
+
+    </div>
+    <div id="meuModal" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Rastrear seu Pedido</h2>
+            <p>Insira o código de rastreamento abaixo:</p>
+            <input type="text" id="codigoRastreamento" placeholder="Ex: BR123456789BR">
+            <button id="rastrear">Rastrear</button>
+        </div>
+    </div>
+    <div id="modaloferta1" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Descrição Produto</h2>
+
+        </div>
+    </div>
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>

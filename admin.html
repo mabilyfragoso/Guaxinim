@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gerenciar Produtos</title>
+    <link rel="stylesheet" href="/assets/css/admin.css">
+    <link rel="stylesheet" href="/assets/css/responsividade.css">
+
+</head>
+
+<body>
+    <center>
+        <img src="/assets/imagens/logotransparente.png" width="400" height="70">
+        <h1>Painel do Administrador</h1>
+
+        <form id="formproduto">
+            <h3>Cadastrar Novo produto</h3>
+            <input type="text" id="nome" placeholder="Nome do Produto" required>
+            <input type="text" id="marca" placeholder="Marca do Produto">
+            <input type="file" id="imagem" accept="image/*">
+
+
+            <input type="text" id="preco" placeholder="preço do Produto">
+            <textarea id="descricao" placeholder="Descrição do produto" rows="3" required></textarea>
+            <div class="selecionarloja">
+                <label for="selecionarloja">Selecionar Loja:</label>
+                <select id="seletorloja" required>
+                    <option value="" selected disabled>escolha uma filial</option>
+                    <option value="Mombaça - Matriz">Mombaça - Matriz</option>
+                    <option value="Tauá">Tauá</option>
+                    <option value="Iguatu">Iguatu</option>
+                    <option value="Acopiara">Acopiara</option>
+                    <option value="Crateús">Crateús</option>
+                    <option value="Senador Pompeu">Senador Pompeu</option>
+                    <option value="Mombaça Tintas">Mombaça Tintas</option>
+                    <option value="Parambu">Parambu</option>
+                    <option value="quixadá">quixadá</option>
+                    <option value="Quixeramobim">Quixeramobim</option>
+                    <option value="Pedra branca">Pedra branca</option>
+                    <option value="Guaraciaba do norte">Guaraciaba do norte</option>
+                    <option value="Icó">Icó</option>
+                    <option value="Nova Russas">Nova Russas</option>
+                    
+                </select>
+            </div>
+            <button type="submit"> Adicionar Produto</button>
+        </form>
+
+
+        <h2>Produtos cadastrados</h2>
+        <div id="listadeprodutos"></div>
+
+        <script src="/assets/js/admin.js"></script>
+    </center>
+</body>
+
+</html>

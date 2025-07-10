@@ -1,0 +1,87 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f7f7f7;
+    color: #333;
+   
+}
+
+h1, h2, h3 {
+    color: #d8510d;
+   
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin-bottom: 30px;
+    
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+
+form button {
+    background-color: #b94200;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+}
+
+form button:hover {
+    background-color: #1b5ecb;
+}
+
+
+#listadeprodutos > div {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+#listadeprodutos img {
+    display: block;
+    margin-top: 10px;
+    max-width: 120px;
+    height: auto;
+}
+
+#listadeprodutos button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #ff5c5c;
+    color: white;
+}
+
+#listadeprodutos button:hover {
+    background-color: #e04a4a;
+}
+
+#listadeprodutos button:nth-child(1) {
+    background-color: #f0ad4e;
+}
+
+#listadeprodutos button:nth-child(1):hover {
+    background-color: #ec9c2d;
+}

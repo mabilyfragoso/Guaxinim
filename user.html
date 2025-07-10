@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/styleuser.css">
+    <title>Guaxinim - Auto peças | Dashboard</title>
+    <script src="/assets/js/dashboard.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="wrapper">
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                
+                <a href="/pages/index.html"><img src="/assets/imagens/logotransparente.png" alt=""></a>
+                </a>
+            </div>
+            <ul>
+                <li><button class="lbtn" onclick="location.href='/frontend/pages/login.html'">Entrar</button></li>
+                <li><button class="rbtn" onclick="location.href='/frontend/pages/register.html'">Criar Conta</button>
+                </li>
+                <li class="user-menu-container">
+                    <button class="user-menu-button">
+                        <img src="/assets/imagens/icon.jpg"
+                            alt="Avatar" class="user-avatar">
+                        <span class="username">Usuário</span>
+                       <i class="fa-solid fa-user"></i>
+                    </button>
+                    <div class="user-dropdown">
+                        <a href="/frontend/pages/dashboard.html" class="dropdown-item">
+                            <img src="/frontend/assets/images/dropdown/calendar-svgrepo-com (2).svg" alt="Dashboard">
+                            Rastreio
+                        </a>
+                        <a href="/frontend/pages/profile.html" class="dropdown-item">
+                            <img src="/frontend/assets/images/dropdown/profile-1336-svgrepo-com.svg" alt="Perfil">
+                            Conta
+                        </a>
+                        <hr class="dropdown-divider">
+                        <a href="#" class="dropdown-item logout">
+                            <img src="/frontend/assets/images/dropdown/log-out-svgrepo-com.svg" alt="Sair">
+                            Sair
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h3>Configurações</h3>
+            <hr class="sidebar-divider">
+            <div class="menu-item" data-target="cards">
+                <i class="fa-solid fa-credit-card"></i>Cartões
+            </div>
+            <div class="menu-item" data-target="personal-data">
+                <i class="fa-solid fa-user"></i>Dados Pessoais
+            </div>
+            <div class="menu-item" data-target="adress">
+                <i class="fa-solid fa-location-dot"></i>Endereço
+            </div>
+            <div class="menu-item" data-target="billing-control">
+                <i class="fa-solid fa-truck-fast"></i>Rastreio
+            </div>
+        </div>
+        <div class="content">
+
+            <section id="cards">
+                <div class="card-details" id="card-details-view">
+                    <h2>Cartões</h2>
+                    <div class="card-info">
+                        <div class="card-issuer-logo">
+                            <img src="/assets/imagens/visa.webp" alt="Logo Emissora">
+                        </div>
+                        <div class="commercial-card-group">
+                            <div class="last-digits">
+                                <p><strong>**** **** **** 1234 </strong></p>
+                            </div>
+                            <div class="card-expiration">
+                                <p>Vencimento: 12/25</p>
+                            </div>
+                            <div class="card-issuer">
+                                <p>Visa</p>
+                            </div>
+                        </div>
+                        <div class="remove-card-container">
+                            <button class="remove-card">Excluir</button>
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="card-issuer-logo">
+                            <img src="/assets/imagens/Mastercard-Logo-2016.png" alt="Logo Emissora">
+                        </div>
+                        <div class="commercial-card-group">
+                            <div class="last-digits">
+                                <p><strong>**** **** **** 1234 </strong></p>
+                            </div>
+                            <div class="card-expiration">
+                                <p>Vencimento: 12/25</p>
+                            </div>
+                            <div class="card-issuer">
+                                <p>Mastercard</p>
+                            </div>
+                        </div>
+                        <button class="remove-card">Excluir</button>
+                    </div>
+                    <button id="add-card-btn" class="button"><strong>+</strong> Adicionar Cartão</button>
+                </div>
+                <div class="new-card-form" id="new-card-form">
+                    <div class="back-button">
+                        <button id="back-to-cards" class="button" style="margin-bottom: 15px;">Voltar</button>
+                    </div>
+                    <h3>Dados do cartão</h3>
+                    <form>
+                        <div class="card-details-add card-row first-line">
+                            <div class="card-detail-item large">
+                                <label for="card-info">Número do Cartão</label>
+                                <input type="text" id="card-info" placeholder="**** **** **** 1234*" required>
+                            </div>
+                            <div class="card-detail-item large">
+                                <label for="cardholder-name">Nome no Cartão</label>
+                                <input type="text" id="cardholder-name" placeholder="Seu nome no cartão*" required>
+                            </div>
+                        </div>
+                        <div class="card-details-add card-row second-line">
+                            <div class="card-detail-item small">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" placeholder="123.456.789-00*" required>
+                            </div>
+                            <div class="card-detail-item ccv">
+                                <label for="ccv">CCV</label>
+                                <input type="text" id="ccv" placeholder="CCV*" required>
+                            </div>
+                            <div class="card-detail-item small">
+                                <label for="expiration">Vencimento</label>
+                                <input type="text" id="expiration" placeholder="MM/YY" required>
+                            </div>
+                        </div>
+                        <h3>Endereço de cobrança</h3>
+                        <div class="billing-details-add billing-row first-line">
+                            <div class="billing-item cep">
+                                <label for="billing-zip">CEP</label>
+                                <input type="text" id="billing-zip" placeholder="00000-000*" required>
+                            </div>
+                            <div class="billing-item uf">
+                                <label for="billing-state">Estado</label>
+                                <select id="UF" name="UF" style="color: #939495;" readonly>
+                                    <option id="UF-default" value="UF" disabled selected>Selecione</option>
+                                    <option id="AC" value="AC">AC</option>
+                                    <option id="AL" value="AL">AL</option>
+                                    <option id="AP" value="AP">AP</option>
+                                    <option id="AM" value="AM">AM</option>
+                                    <option id="BA" value="BA">BA</option>
+                                    <option id="CE" value="CE">CE</option>
+                                    <option id="DF" value="DF">DF</option>
+                                    <option id="ES" value="ES">ES</option>
+                                    <option id="GO" value="GO">GO</option>
+                                    <option id="MA" value="MA">MA</option>
+                                    <option id="MT" value="MT">MT</option>
+                                    <option id="MS" value="MS">MS</option>
+                                    <option id="MG" value="MG">MG</option>
+                                    <option id="PA" value="PA">PA</option>
+                                    <option id="PB" value="PB">PB</option>
+                                    <option id="PR" value="PR">PR</option>
+                                    <option id="PE" value="PE">PE</option>
+                                    <option id="PI" value="PI">PI</option>
+                                    <option id="RJ" value="RJ">RJ</option>
+                                    <option id="RN" value="RN">RN</option>
+                                    <option id="RS" value="RS">RS</option>
+                                    <option id="RO" value="RO">RO</option>
+                                    <option id="RR" value="RR">RR</option>
+                                    <option id="SC" value="SC">SC</option>
+                                    <option id="SP" value="SP">SP</option>
+                                    <option id="SE" value="SE">SE</option>
+                                    <option id="TO" value="TO">TO</option>
+                                </select>
+                            </div>
+                            <div class="billing-item city">
+                                <label for="billing-city">Cidade</label>
+                                <input type="text" id="billing-city" placeholder="Sua Cidade" required>
+                            </div>
+                        </div>
+                        <div class="billing-details-add billing-row second-line">
+                            <div class="billing-item address">
+                                <label for="billing-address">Endereço</label>
+                                <input type="text" id="billing-address" placeholder="Rua, Avenida, etc*" required>
+                            </div>
+                        </div>
+                        <div class="billing-details-add billing-row third-line">
+                            <div class="billing-item district">
+                                <label for="billing-district">Bairro</label>
+                                <input type="text" id="billing-district" placeholder="Bairro*" required>
+                            </div>
+                            <div class="billing-item number">
+                                <label for="billing-number">Número</label>
+                                <input type="text" id="billing-number" placeholder="N°*" required>
+                            </div>
+                        </div>
+                        <button type="submit" id="save-card-button" class="button">Salvar Cartão</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="personal-data">
+                <div class="tab-content" id="personal-data">
+                    <div class="personal-data-form">
+                        <h2>Dados Pessoais</h2>
+                        <form>
+                            <div class="form-group flex-30">
+                                <label for="nome">Nome</label>
+                                <input type="text" id="nome" name="nome" value="João" readonly>
+                            </div>
+                            <div class="form-group flex-35">
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" id="sobrenome" name="sobrenome" value="Silva" readonly>
+                            </div>
+                            <div class="form-group flex-25">
+                                <label for="telefone">N° de Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" value="(11) 99999-9999" readonly>
+                            </div>
+                            <div class="form-group flex-40">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" value="joao@email.com" readonly>
+                            </div>
+                            <div class="form-group flex-25">
+                                <label for="nascimento">Data de Nascimento</label>
+                                <input type="date" id="nascimento" name="nascimento" value="1990-01-01" readonly>
+                            </div>
+                            <div class="form-group flex-25">
+                                <label for="cpf">CPF</label>
+                                <input type="text" id="cpf" name="cpf" value="123.456.789-00" readonly>
+                            </div>
+                        </form>
+                        <div class="button-group">
+                            <button type="cancel" class="cancel-button">Cancelar</button>
+                            <button type="submit" id="data-edit-button" class="edit-button">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="adress">
+                <div class="tab-content" id="adress">
+                    <div class="personal-data-form">
+                        <h2>Endereço de cobrança</h2>
+                        <form>
+                            <div class="form-group flex-20">
+                                <label for="cep">CEP</label>
+                                <input type="text" id="cep" name="cep" value="01310-000" readonly>
+                            </div>
+                            <div class="form-group flex-20">
+                                <label for="UF">Estado</label>
+                                <select id="UF" name="UF" disabled style="color: #939495;" readonly>
+                                    <option id="UF-default" value="UF" disabled selected>Selecione</option>
+                                    <option id="AC" value="AC">AC</option>
+                                    <option id="AL" value="AL">AL</option>
+                                    <option id="AP" value="AP">AP</option>
+                                    <option id="AM" value="AM">AM</option>
+                                    <option id="BA" value="BA">BA</option>
+                                    <option id="CE" value="CE">CE</option>
+                                    <option id="DF" value="DF">DF</option>
+                                    <option id="ES" value="ES">ES</option>
+                                    <option id="GO" value="GO">GO</option>
+                                    <option id="MA" value="MA">MA</option>
+                                    <option id="MT" value="MT">MT</option>
+                                    <option id="MS" value="MS">MS</option>
+                                    <option id="MG" value="MG">MG</option>
+                                    <option id="PA" value="PA">PA</option>
+                                    <option id="PB" value="PB">PB</option>
+                                    <option id="PR" value="PR">PR</option>
+                                    <option id="PE" value="PE">PE</option>
+                                    <option id="PI" value="PI">PI</option>
+                                    <option id="RJ" value="RJ">RJ</option>
+                                    <option id="RN" value="RN">RN</option>
+                                    <option id="RS" value="RS">RS</option>
+                                    <option id="RO" value="RO">RO</option>
+                                    <option id="RR" value="RR">RR</option>
+                                    <option id="SC" value="SC">SC</option>
+                                    <option id="SP" value="SP">SP</option>
+                                    <option id="SE" value="SE">SE</option>
+                                    <option id="TO" value="TO">TO</option>
+                                </select>
+                            </div>
+                            <div class="form-group flex-40">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" id="cidade" name="cidade" value="São Paulo" readonly>
+                            </div>
+                            <div class="form-group flex-40">
+                                <label for="rua">Rua</label>
+                                <input type="text" id="rua" name="rua" value="Av. Paulista" readonly>
+                            </div>
+                            <div class="form-group flex-10">
+                                <label for="numero">Número</label>
+                                <input type="text" id="numero" name="numero" value="1000" readonly>
+                            </div>
+                            <div class="form-group flex-30">
+                                <label for="bairro">Bairro</label>
+                                <input type="text" id="bairro" name="bairro" value="Bela Vista" readonly>
+                            </div>
+                        </form>
+                        <div class="button-group">
+                            <button type="cancel" class="cancel-button">Cancelar</button>
+                            <button type="submit" id="adress-save-button" class="edit-button">Editar</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="billing-control" style="display: none;">
+                <h2>Rastrear Pedido</h2>
+                <div class="tracking-container">
+                    <p>Informe o código de rastreamento do seu pedido para verificar o status.</p>
+                    <div class="form-group">
+                        <label for="tracking-code">Código de Rastreamento</label>
+                        <input type="text" id="tracking-code" placeholder="Ex: BR123456789XX" required>
+                    </div>
+                    <br>
+                    <button id="track-button" class="button">Rastrear Pedido</button>
+
+                    <div id="tracking-results" class="tracking-results" style="display: none;">
+                        <h3>Status do Pedido: <span id="order-status"></span></h3>
+                        <p>Última atualização: <span id="last-update"></span></p>
+                        <div class="tracking-events">
+                            </div>
+                        <button class="button back-button" id="clear-tracking-button">Limpar e Rastrear Outro</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <hr class="footer-hr">
+
+    <script src="/assets/js/dashboard.js"></script>
+</body>
+
+</html>

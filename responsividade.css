@@ -1,0 +1,101 @@
+
+.wrapper {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+  min-height: 100vh;
+}
+
+
+.menu-categorias ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 768px) {
+
+  .produtocard {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .selecionarloja {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .cep-input input {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.5rem;
+  }
+
+  .form-pesquisa {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .form-pesquisa input[type="search"] {
+    flex: 1;
+  }
+
+  .banner3 img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .noticiasforms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .noticiasforms input,
+  .noticiasforms button {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+  }
+
+  .produtos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    width: 400px;
+    margin: auto;
+  }
+}
