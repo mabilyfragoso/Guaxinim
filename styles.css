@@ -142,11 +142,11 @@ body {
 }
 
 .textos1 {
-  background-image: url(/assets/imagens/banner1.png);
+  background-image: url(banner1.png);
 }
 
 .textos2 {
-  background-image: url(/assets/imagens/banner2.png);
+  background-image: url(banner2.png);
 }
 
 @keyframes desliza {
