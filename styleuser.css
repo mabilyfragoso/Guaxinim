@@ -1,13 +1,12 @@
-/* --- Base and Variables --- */
 :root {
-    --primary-color: #d8510d; /* Dark Green */
-    --primary-dark-color: #d8510d; /* Even darker green for hover */
-    --secondary-color: #e0e0e0; /* Light Gray */
-    --background-color: #f5f5f5; /* General background */
-    --text-color: #333; /* Main text color */
-    --light-text-color: #666; /* Secondary/faded text color */
-    --white-color: #ffffff; /* White */
-    --danger-color: #c62828; /* Red for destructive actions */
+    --primary-color: #d8510d;
+    --primary-dark-color: #d8510d;
+    --secondary-color: #e0e0e0;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --light-text-color: #666;
+    --white-color: #ffffff;
+    --danger-color: #c62828;
     --border-radius: 8px;
     --card-border-radius: 12px;
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -20,7 +19,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Ensure 'Inter' is imported or fallback to sans-serif */
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -41,7 +40,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Header --- */
 header {
     background-color: var(--white-color);
     box-shadow: var(--shadow);
@@ -101,7 +99,6 @@ header {
     background-color: var(--primary-dark-color);
 }
 
-/* User Menu Dropdown */
 .user-menu-container {
     position: relative;
 }
@@ -185,12 +182,12 @@ header {
 .dropdown-item img {
     width: 20px;
     height: 20px;
-    filter: invert(30%) sepia(15%) saturate(1000%) hue-rotate(90deg) brightness(90%) contrast(80%); /* To match primary color */
+    filter: invert(30%) sepia(15%) saturate(1000%) hue-rotate(90deg) brightness(90%) contrast(80%);
     transition: filter 0.2s ease;
 }
 
 .dropdown-item:hover img {
-    filter: invert(27%) sepia(85%) saturate(1478%) hue-rotate(96deg) brightness(96%) contrast(87%); /* Darker primary color on hover */
+    filter: invert(27%) sepia(85%) saturate(1478%) hue-rotate(96deg) brightness(96%) contrast(87%);
 }
 
 .dropdown-divider {
@@ -208,11 +205,10 @@ header {
     color: var(--danger-color);
 }
 .logout:hover img {
-    filter: invert(15%) sepia(87%) saturate(5833%) hue-rotate(356deg) brightness(88%) contrast(92%); /* Red filter for logout icon */
+    filter: invert(15%) sepia(87%) saturate(5833%) hue-rotate(356deg) brightness(88%) contrast(92%);
 }
 
 
-/* --- Dashboard Layout --- */
 .dashboard-container {
     display: flex;
     flex: 1;
@@ -221,7 +217,7 @@ header {
     background-color: var(--white-color);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    overflow: hidden; /* For rounded corners */
+    overflow: hidden;
 }
 
 .sidebar {
@@ -231,7 +227,7 @@ header {
     border-right: 1px solid var(--secondary-color);
     display: flex;
     flex-direction: column;
-    flex-shrink: 0; /* Prevent shrinking */
+    flex-shrink: 0;
 }
 
 .sidebar h3 {
@@ -279,17 +275,16 @@ header {
     transition: color var(--transition-duration);
 }
 
-/* Content Area */
 .content {
     flex-grow: 1;
     padding: 2rem;
     background-color: var(--white-color);
-    position: relative; /* For absolute positioning of sections */
+    position: relative;
 }
 
 .content section {
     display: none;
-    position: absolute; /* Hide sections initially and manage with JS */
+    position: absolute;
     top: 2rem;
     left: 2rem;
     right: 2rem;
@@ -301,7 +296,7 @@ header {
 .content section.active {
     display: block;
     opacity: 1;
-    position: static; /* Take up space when active */
+    position: static;
 }
 
 .content h2 {
@@ -310,7 +305,6 @@ header {
     margin-bottom: 1.5rem;
 }
 
-/* --- Card Details Section --- */
 .card-details, .new-card-form {
     padding: 1.5rem;
     background-color: var(--white-color);
@@ -328,7 +322,7 @@ header {
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
     background-color: var(--background-color);
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -346,7 +340,7 @@ header {
     flex-direction: column;
     flex-grow: 1;
     text-align: left;
-    min-width: 200px; /* Ensure group doesn't get too small */
+    min-width: 200px;
 }
 
 .commercial-card-group p {
@@ -381,7 +375,7 @@ header {
     font-weight: bold;
     cursor: pointer;
     transition: background-color var(--transition-duration), transform 0.2s ease-out;
-    display: inline-block; /* For + Adicionar Cartão button */
+    display: inline-block;
     text-align: center;
     width: auto;
 }
@@ -396,9 +390,8 @@ header {
     margin-top: 1rem;
 }
 
-/* New Card Form */
 .new-card-form {
-    display: none; /* Hidden by default, toggled by JS */
+    display: none;
     padding: 1.5rem;
     border: 1px solid var(--secondary-color);
     border-radius: var(--border-radius);
@@ -426,11 +419,11 @@ header {
     display: flex;
     flex-direction: column;
     flex: 1;
-    min-width: 150px; /* Base min-width for inputs */
+    min-width: 150px;
 }
 
 .card-detail-item.large {
-    flex: 2; /* Make card number and name wider */
+    flex: 2;
     min-width: 250px;
 }
 
@@ -479,7 +472,7 @@ header {
 
 #save-card-button {
     width: auto;
-    align-self: flex-end; /* Push button to the right */
+    align-self: flex-end;
     margin-top: 1.5rem;
 }
 
@@ -497,7 +490,6 @@ header {
     color: var(--text-color);
 }
 
-/* --- Personal Data & Address Sections --- */
 .personal-data-form {
     padding: 1.5rem;
     background-color: var(--white-color);
@@ -514,7 +506,7 @@ header {
 .personal-data-form form {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem 1.5rem; /* Row gap, Column gap */
+    gap: 1.5rem 1.5rem;
     margin-bottom: 2rem;
 }
 
@@ -523,7 +515,7 @@ header {
     flex-direction: column;
 }
 
-.form-group.flex-30 { flex: 0 0 calc(30% - 1.5rem); } /* Adjust flex-basis for gaps */
+.form-group.flex-30 { flex: 0 0 calc(30% - 1.5rem); }
 .form-group.flex-35 { flex: 0 0 calc(35% - 1.5rem); }
 .form-group.flex-25 { flex: 0 0 calc(25% - 1.5rem); }
 .form-group.flex-40 { flex: 0 0 calc(40% - 1.5rem); }
@@ -550,7 +542,6 @@ header {
     transition: border-color var(--transition-duration), background-color var(--transition-duration);
 }
 
-/* Readonly state styles */
 .personal-data-form input:read-only,
 .personal-data-form select:disabled {
     background-color: var(--secondary-color);
@@ -561,14 +552,14 @@ header {
 
 .personal-data-form input:read-only:focus,
 .personal-data-form select:disabled:focus {
-    border-color: var(--secondary-color); /* No highlight on focus for read-only */
+    border-color: var(--secondary-color);
     box-shadow: none;
 }
 
 
 .button-group {
     display: flex;
-    justify-content: flex-end; /* Align buttons to the right */
+    justify-content: flex-end;
     gap: 1rem;
     margin-top: 1.5rem;
 }
@@ -603,15 +594,13 @@ header {
     transform: translateY(-2px);
 }
 
-/* --- Footer (simple placeholder for this page) --- */
 .footer-hr {
     border: none;
     border-top: 1px solid var(--secondary-color);
-    margin-top: auto; /* Push to bottom */
+    margin-top: auto;
     padding-top: 1rem;
 }
 
-/* --- Responsive Adjustments --- */
 @media (max-width: 1024px) {
     .dashboard-container {
         flex-direction: column;
@@ -622,20 +611,20 @@ header {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--secondary-color);
-        flex-direction: row; /* Make sidebar horizontal */
-        overflow-x: auto; /* Allow horizontal scroll for menu items */
+        flex-direction: row;
+        overflow-x: auto;
         padding: 1rem;
-        justify-content: center; /* Center items if few */
-        flex-wrap: wrap; /* Allow menu items to wrap */
-        gap: 0.5rem; /* Reduce gap */
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
     .sidebar h3, .sidebar-divider {
-        display: none; /* Hide title and divider on small screens */
+        display: none;
     }
 
     .menu-item {
-        flex-shrink: 0; /* Prevent items from shrinking */
+        flex-shrink: 0;
         padding: 0.8rem 1rem;
     }
 
@@ -644,9 +633,15 @@ header {
     }
 
     .content section {
-        position: static; /* No absolute positioning for stacking */
-        display: none; /* Managed by JS to display active one */
-        opacity: 1; /* Always visible if 'active' */
+        position: static;
+        display: none;
+        opacity: 1;
+    }
+
+    .content section.active {
+        display: block;
+        opacity: 1;
+        position: static;
     }
 
     .card-info {
@@ -670,9 +665,35 @@ header {
     }
 
     .card-detail-item, .billing-item {
-        min-width: unset; /* Remove min-width to allow full width */
-        width: 100%; /* Take full width */
+        min-width: unset;
+        width: 100%;
     }
+
+    .card-detail-item.large {
+        flex: 2;
+        min-width: 250px;
+    }
+
+    .card-detail-item.small, .billing-item.cep, .billing-item.uf, .billing-item.number {
+        flex: 0.8;
+        min-width: 120px;
+    }
+
+    .card-detail-item.ccv {
+        flex: 0.5;
+        min-width: 80px;
+    }
+
+    .billing-item.address {
+        flex: 2;
+        min-width: 250px;
+    }
+
+    .billing-item.city, .billing-item.district {
+        flex: 1.2;
+        min-width: 180px;
+    }
+
 
     .personal-data-form form {
         flex-direction: column;
@@ -680,7 +701,7 @@ header {
     }
 
     .form-group {
-        flex: 0 0 100%; /* Make all form groups full width */
+        flex: 0 0 100%;
     }
 
     .button-group {
@@ -720,23 +741,23 @@ header {
     }
 
     .user-dropdown {
-        position: static; /* Keep dropdown in flow on small screens */
+        position: static;
         box-shadow: none;
         border: none;
         border-top: 1px solid var(--secondary-color);
         border-radius: 0;
         margin-top: 0.5rem;
-        opacity: 1; /* Always visible if active */
+        opacity: 1;
         visibility: visible;
         transform: translateY(0);
         width: 100%;
-        max-height: 0; /* Hidden by default unless active */
+        max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-out;
     }
 
     .user-menu-container.active .user-dropdown {
-        max-height: 300px; /* Adjust as needed */
+        max-height: 300px;
     }
 
     .dashboard-container {
@@ -745,7 +766,7 @@ header {
 
     .sidebar {
         padding: 0.8rem;
-        justify-content: flex-start; /* Align menu items to start */
+        justify-content: flex-start;
     }
 
     .menu-item {
